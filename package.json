@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rimraf lib",
     "lint": "standard src/**/*.js",
-    "build": "npm run clean && babel src --out-dir lib",
+    "build": "npm run clean && npm run build:scripts",
+    "build:scripts": "babel src --out-dir lib",
     "test": "ava",
     "test:dev": "ava --watch",
     "prepublish": "npm run build",    
