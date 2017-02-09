@@ -1,0 +1,49 @@
+{
+  "name": "vuex-test-utils",
+  "version": "0.0.1",
+  "description": "Make it more easy testing your vuex actions",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "lint": "standard src/**/*.js",
+    "build": "npm run clean && babel src --out-dir lib",
+    "test": "ava",
+    "test:dev": "ava --watch",
+    "prepublish": "npm run build",    
+    "prebuild": "npm run test",
+    "pretest": "npm run lint"
+  },
+  "ava": {
+    "require": [
+      "babel-register"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thibremy/vuex-test-utils.git"
+  },
+  "keywords": [
+    "vuex",
+    "testing",
+    "vue"
+  ],
+  "author": "Thibault REMY",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thibremy/vuex-test-utils/issues"
+  },
+  "homepage": "https://github.com/thibremy/vuex-test-utils#readme",
+  "devDependencies": {
+    "ava": "^0.18.1",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "babel-register": "^6.22.0",
+    "rimraf": "^2.5.4",
+    "sinon": "^1.17.7",
+    "standard": "^8.6.0"
+  },
+  "dependencies": {
+    "lodash.isfunction": "^3.0.8",
+    "lodash.isobject": "^3.0.2"
+  }
+}
