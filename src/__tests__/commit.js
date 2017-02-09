@@ -14,6 +14,6 @@ test('commit with object style', (t) => {
   t.is(mutation.type, 'TYPE')
   t.deepEqual(mutation.payload, {
     type: 'TYPE',
-    foo: 'bar',
+    foo: 'bar'
   })
 })

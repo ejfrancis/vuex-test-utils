@@ -6,7 +6,7 @@ test('inlined args', (t) => {
 
   t.is(type, 'TYPE')
   t.deepEqual(payload, {
-    test: true,
+    test: true
   })
 })
 
@@ -16,6 +16,6 @@ test('object args', (t) => {
   t.is(type, 'TYPE')
   t.deepEqual(payload, {
     type: 'TYPE',
-    test: true,
+    test: true
   })
 })

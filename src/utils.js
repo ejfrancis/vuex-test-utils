@@ -5,7 +5,7 @@ export const unifyObjectStyle = (type, payload, options) => {
     return {
       options: payload,
       payload: type,
-      type: type.type,
+      type: type.type
     }
   }
 

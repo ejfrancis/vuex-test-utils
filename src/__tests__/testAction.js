@@ -10,7 +10,7 @@ test('basic use of testAction', (t) => {
 
   const gettersMock = {
     getter1: spy(),
-    getter2: spy(),
+    getter2: spy()
   }
 
   const action = spy(({ commit, dispatch, getters, state }, payload) => {
@@ -41,7 +41,7 @@ test('basic use of testAction', (t) => {
   const mutations = getMutations()
 
   t.deepEqual(mutations, [
-    { type: 'TEST_COMMIT', payload: 1 },
+    { type: 'TEST_COMMIT', payload: 1 }
   ])
 })
 
@@ -55,7 +55,7 @@ test('with inlined commit', (t) => {
   const mutations = getMutations()
 
   t.deepEqual(mutations, [
-    { type: 'TEST_COMMIT', payload: 1 },
+    { type: 'TEST_COMMIT', payload: 1 }
   ])
 })
 
@@ -75,7 +75,7 @@ test('with object-style commit', (t) => {
       type: 'TEST_COMMIT',
       payload: {
         type: 'TEST_COMMIT',
-        id: 1,
+        id: 1
       }
     }
   ])
@@ -97,7 +97,7 @@ test('multiple mutations inside one dispatch', (t) => {
   t.deepEqual(mutations, [
     { type: 'TEST_COMMIT', payload: 1 },
     { type: 'TEST_COMMIT', payload: 2 },
-    { type: 'TEST_COMMIT', payload: 3 },
+    { type: 'TEST_COMMIT', payload: 3 }
   ])
 })
 
@@ -123,7 +123,7 @@ test('multiple mutations from multi dispatch', (t) => {
   t.deepEqual(mutations, [
     { type: 'TEST_COMMIT', payload: 1 },
     { type: 'TEST_COMMIT', payload: 2 },
-    { type: 'TEST_COMMIT', payload: 3 },
+    { type: 'TEST_COMMIT', payload: 3 }
   ])
 })
 

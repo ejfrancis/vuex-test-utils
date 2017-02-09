@@ -32,7 +32,7 @@ export default (initialState = {}, getters = {}, actions = {}) => {
       state: initialState,
       commit: call,
       getters,
-      actions,
+      actions
     }),
   }
 }
